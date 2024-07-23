@@ -63,13 +63,13 @@
         <link rel="stylesheet" href="src/css/styles.css">
     </head>
     <body>
-        <div class="header">
+        <header class="header">
             <h1>Kidnappings & Missing Persons in Uganda</h1>
-        </div>
-
-        <div class="content">
-            <span class="content__sort-by">Filter by:</span>
-            <div class="search-sort">
+            <h2>#March To Parliament - 23rd/July/2024</h2>
+        </header>
+        <section class="filters">
+            <span>Filter by:</span>
+            <div class="filter-and-search">
                 <div class="content__buttons buttons">
                     <button data-category="All" class="active">All</button>
                     <button data-category="Missing">Missing</button>
@@ -81,16 +81,18 @@
                 <input type="text" id="searchInput"
                     placeholder="Search Person's Name...">
             </div>
-            <div id="persons" class="persons"></div>
-        </div>
+        </section>
+        <section class="content">
 
-        <script type="text/javascript" src="src/js/scripts.js"></script>
-    </body>
+            <div id="persons" class="persons"></div>
+        </section>
+
     <footer class="footer">
         <div class="footer-content">
             <nav class="footer-nav">
                 <a href="./privacy.html" title="Privacy Policy" rel="noopener" target="_blank">Privacy Policy</a>
                 <a href="./cookies.html" title="Cookie Policy" rel="noopener" target="_blank">Cookie Policy</a>
+                <a href="./analytics.html" title="Analytics " rel="noopener" target="_blank"> Analytics</a><br>
             </nav>
             <p class="copyright">
                 <span id="current-year"></span> &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.
@@ -99,6 +101,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="src/js/scripts.js"></script>
 
     <script>
         function updateDateTime() {
@@ -114,4 +117,5 @@
         updateDateTime();
         setInterval(updateDateTime, 1000);
     </script>
+    </body>
 </html>
