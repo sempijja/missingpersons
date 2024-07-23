@@ -89,13 +89,13 @@
         </style>
     </head>
     <body>
-        <div class="header">
+        <header class="header">
             <h1>Kidnappings & Missing Persons in Uganda</h1>
-        </div>
-
-        <div class="content">
-            <span class="content__sort-by">Filter by:</span>
-            <div class="search-sort">
+            <h2>#March To Parliament - 23rd/July/2024</h2>
+        </header>
+        <section class="filters">
+            <span>Filter by:</span>
+            <div class="filter-and-search">
                 <div class="content__buttons buttons">
                     <button data-category="All" class="active">All</button>
                     <button data-category="Missing">Missing</button>
@@ -107,45 +107,20 @@
                 <input type="text" id="searchInput"
                     placeholder="Search Person's Name...">
             </div>
+        </section>
+        <section class="content">
+
             <div id="persons" class="persons"></div>
         </div>
+
         <script type="text/javascript" src="src/js/scripts.js"></script>
-        
-         
-        <!-- Scroll to top button funtionality start-->
-
-         <button id="scrollToTopBtn" title="Go to top">Back to top</button>
-
-    <script>
-        // Get the button
-        var mybutton = document.getElementById("scrollToTopBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        mybutton.onclick = function() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
-
-     <!-- End of scroll to top button functionality -->
-
     </body>
     <footer class="footer">
         <div class="footer-content">
             <nav class="footer-nav">
                 <a href="./privacy.html" title="Privacy Policy" rel="noopener" target="_blank">Privacy Policy</a>
                 <a href="./cookies.html" title="Cookie Policy" rel="noopener" target="_blank">Cookie Policy</a>
+                <a href="./analytics.html" title="Analytics " rel="noopener" target="_blank"> Analytics</a><br>
             </nav>
             <p class="copyright">
                 <span id="current-year"></span> &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.
@@ -154,6 +129,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="src/js/scripts.js"></script>
 
     <script>
         function updateDateTime() {
@@ -169,4 +145,5 @@
         updateDateTime();
         setInterval(updateDateTime, 1000);
     </script>
+    </body>
 </html>
