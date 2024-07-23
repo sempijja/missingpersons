@@ -531,12 +531,12 @@
     {
         "id": 46,
         "name": "Gallen Mambule",
-        "image": "src/img/image_of_person.jpg",
+        "image": "src/img/mambule_gallen.jpeg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
         "holding_location": "Kampala CPS",
-        "twitter": "Galen_256",
+        "twitter": "@Galen_256",
         "gender": "Female"
     },
     {
