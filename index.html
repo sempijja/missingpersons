@@ -61,6 +61,32 @@
 
         <!-- Link to external CSS -->
         <link rel="stylesheet" href="src/css/styles.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Scroll to top button start -->
+        <style>
+            #scrollToTopBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: #a7a7a7;
+                color: white;
+                cursor: pointer;
+                padding: 16px;
+                border-radius: 99px;
+            }
+    
+            #scrollToTopBtn:hover {
+                background-color: #4d4d4d;
+            }
+        </style>
     </head>
     <body>
         <div class="header">
@@ -83,8 +109,37 @@
             </div>
             <div id="persons" class="persons"></div>
         </div>
-
         <script type="text/javascript" src="src/js/scripts.js"></script>
+        
+         
+        <!-- Scroll to top button funtionality start-->
+
+         <button id="scrollToTopBtn" title="Go to top">Back to top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+     <!-- End of scroll to top button functionality -->
+
     </body>
     <footer class="footer">
         <div class="footer-content">
